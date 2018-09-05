@@ -1,0 +1,5 @@
+wil iedereen ff proberen dit bestand te openen en bewerken vanuit:
+Documenten -> github
+
+Nadat je het bestand hebt aangepast moet je m opslaan.
+Daarna ga je naar github om het bestand te committen. Vergeet niet hierna nog het bestand te pushen!
