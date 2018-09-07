@@ -10,6 +10,6 @@
 
 int main()
 {
-	printf("HALLO WERELD!");
+	printf("GOODBYE CRUEL WORLD!");
 	return 0;
 }
