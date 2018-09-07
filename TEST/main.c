@@ -10,6 +10,10 @@
 
 int main()
 {
+<<<<<<< HEAD
 	printf("GOODBYE CRUEL WORLD!");
+=======
+	printf("Hello, Galaxy!");
+>>>>>>> 3ecf6f11422b2007595219b97d0dd9d8d9b0a5a7
 	return 0;
 }
