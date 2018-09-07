@@ -10,6 +10,6 @@
 
 int main()
 {
-	printf("HALLO WERELD!");
+	printf("Hello, Galaxy!");
 	return 0;
 }
