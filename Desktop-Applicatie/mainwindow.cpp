@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     valueLabels *labs = new valueLabels();
 
-    labs->setTempValue(27);
+    labs->setTempValue(-273);
 
     updateValueLabels( labs->getTempValue(), labs->getHumidValue(), labs->getPressValue() );
 }

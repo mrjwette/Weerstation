@@ -4,7 +4,10 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets
+QT       += \
+core gui widgets\
+sql
+
 
 TARGET = Desktop-Applicatie
 TEMPLATE = app
@@ -25,11 +28,14 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    valuelabels.cpp
+    valuelabels.cpp \
+    connection.cpp
 
 HEADERS += \
         mainwindow.h \
-    valuelabels.h
+    valuelabels.h \
+    connection.h \
+    connection.h
 
 FORMS += \
         mainwindow.ui
