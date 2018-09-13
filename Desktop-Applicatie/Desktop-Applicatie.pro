@@ -24,10 +24,12 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    valuelabels.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    valuelabels.h
 
 FORMS += \
         mainwindow.ui
