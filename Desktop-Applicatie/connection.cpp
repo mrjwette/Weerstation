@@ -21,9 +21,10 @@ Connection::Connection()
     db.setHostName("localhost");
 
     db.setUserName("root");
-    db.setPassword("Admin_123");
+    db.setPassword("7IH7@A7d");
     db.setDatabaseName("fun4all");
     db.setPort(3306);
+    db.setConnectOptions();
     if (db.open())
     {
         qDebug() << "Test";        
