@@ -11,6 +11,7 @@
 #include <QtSql/QSql>
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlQuery>
+#include <QtSql/QSqlError>
 
 #include <QtDebug>
 
@@ -22,7 +23,7 @@ Connection::Connection()
 
     db.setUserName("root");
     db.setPassword("7IH7@A7d");
-    db.setDatabaseName("fun4all");
+    db.setDatabaseName("kaas");
     db.setPort(3306);
     db.setConnectOptions();
     if (db.open())
@@ -31,7 +32,11 @@ Connection::Connection()
     }
     else
     {
+        QSqlError err = db.lastError();
         qDebug() << "Failed to open database";
+        qDebug() << err.databaseText();
+        qDebug() << err.driverText();
+        qDebug() << err.text();
     }
 }
 
