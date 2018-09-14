@@ -6,25 +6,38 @@
 #include <QtSql/qsqldatabase.h>
 #include <QtSql/QsqlQuery>
 */
+#include <iostream>
 
 #include <QtSql/QSql>
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlQuery>
 
+#include <QtDebug>
+
+
 Connection::Connection()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase("WeerStation");
+    QSqlDatabase db = QSqlDatabase::addDatabase( "QMYSQL" );
     db.setHostName("localhost");
-    db.setDatabaseName("fun4all");
+
     db.setUserName("root");
-    db.setPassword("admin");
+    db.setPassword("Admin_123");
+    db.setDatabaseName("fun4all");
     db.setPort(3306);
-    db.setConnectOptions();
-    bool ok = db.open();
+    if (db.open())
+    {
+        qDebug() << "Test";        
+    }
+    else
+    {
+        qDebug() << "Failed to open database";
+    }
 }
 
 void Connection::test()
 {
+
+    QSqlQuery query("SELECT name FROM country");
 
 }
 
@@ -33,7 +46,7 @@ void Connection::test()
 
 /*QSqlDatabase db;
    db.database();
-   /* db.setHostName("localhost");
+    db.setHostName("localhost");
     db.setUserName("root");
     db.setPassword("admin");
     db.setDatabaseName("fun4all");

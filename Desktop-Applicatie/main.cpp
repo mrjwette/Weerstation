@@ -4,13 +4,13 @@
 #include <iostream>
 #include <string>
 
-
+#include <iostream>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-
     Connection c;
+    //c.test();
 
     MainWindow w;
     w.show();
