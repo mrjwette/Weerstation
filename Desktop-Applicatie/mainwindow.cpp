@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "valuelabels.h"
+#include "database.h"
 
 #include <QString>
 
@@ -11,8 +12,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     valueLabels *labs = new valueLabels();
+    database *datbas = new database();
 
-    labs->setTempValue(27);
+    if(datbas->setupConnection())
+        labs->setTempValue(datbas->getTempVal());
 
     updateValueLabels( labs->getTempValue(), labs->getHumidValue(), labs->getPressValue() );
 }
