@@ -25,7 +25,7 @@ Connection::Connection()
     db.setPassword("7IH7@A7d");
     db.setDatabaseName("kaas");
     db.setPort(3306);
-    db.setConnectOptions();
+
     if (db.open())
     {
         qDebug() << "Test";        
