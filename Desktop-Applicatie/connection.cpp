@@ -25,7 +25,7 @@ Connection::Connection()
     db.setPassword("Admin_123");
     db.setDatabaseName("fun4all");
     db.setPort(3306);
-    db.setConnectOptions();
+
     if (db.open())
     {
         qDebug() << "Database opened.";

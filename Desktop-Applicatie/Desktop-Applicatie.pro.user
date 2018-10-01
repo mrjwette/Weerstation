@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+<<<<<<< HEAD
 <!-- Written by QtCreator 4.7.0, 2018-09-28T15:14:11. -->
+=======
+<!-- Written by QtCreator 4.7.0, 2018-09-15T15:06:54. -->
+>>>>>>> e3020a7042014249b23db080826d96228d6c92fa
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -296,7 +300,11 @@
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.CommandLineArguments"></value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">Desktop-Applicatie.pro</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory"></value>
+<<<<<<< HEAD
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory.default">C:/Users/2125228/Documents/GitHub/Weerstation/build-Desktop-Applicatie-Desktop_Qt_5_11_1_MinGW_32bit-Debug</value>
+=======
+    <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory.default">C:/Users/djans/Documents/GitHub/Weerstation/build-Desktop-Applicatie-Desktop_Qt_5_11_1_MinGW_32bit-Debug</value>
+>>>>>>> e3020a7042014249b23db080826d96228d6c92fa
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
