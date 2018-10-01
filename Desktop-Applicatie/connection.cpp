@@ -18,17 +18,17 @@
 
 Connection::Connection()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase( "QMYSQL" );
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLite");
     db.setHostName("localhost");
 
     db.setUserName("root");
-    db.setPassword("7IH7@A7d");
-    db.setDatabaseName("kaas");
+    db.setPassword("Admin_123");
+    db.setDatabaseName("fun4all");
     db.setPort(3306);
     db.setConnectOptions();
     if (db.open())
     {
-        qDebug() << "Test";        
+        qDebug() << "Database opened.";
     }
     else
     {
@@ -50,16 +50,5 @@ void Connection::test()
 
 
 
-/*QSqlDatabase db;
-   db.database();
-    db.setHostName("localhost");
-    db.setUserName("root");
-    db.setPassword("admin");
-    db.setDatabaseName("fun4all");
-    db.setPort(3306);
-    db.setConnectOptions();
-    if(db.open())
-    {
-        db.close();
-    }*/
+
 

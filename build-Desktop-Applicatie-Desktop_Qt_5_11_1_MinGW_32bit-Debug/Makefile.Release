@@ -221,7 +221,7 @@ release/moc_mainwindow.cpp: C:/Qt/5.11.1/mingw53_32/include/QtWidgets/QMainWindo
 		../Desktop-Applicatie/mainwindow.h \
 		release/moc_predefs.h \
 		C:/Qt/5.11.1/mingw53_32/bin/moc.exe
-	C:\Qt\5.11.1\mingw53_32\bin\moc.exe $(DEFINES) --include release/moc_predefs.h -IC:/Qt/5.11.1/mingw53_32/mkspecs/win32-g++ -IC:/Users/djans/Documents/GitHub/Weerstation/Desktop-Applicatie -IC:/Qt/5.11.1/mingw53_32/include -IC:/Qt/5.11.1/mingw53_32/include/QtWidgets -IC:/Qt/5.11.1/mingw53_32/include/QtGui -IC:/Qt/5.11.1/mingw53_32/include/QtANGLE -IC:/Qt/5.11.1/mingw53_32/include/QtSql -IC:/Qt/5.11.1/mingw53_32/include/QtCore -I. -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward ..\Desktop-Applicatie\mainwindow.h -o release\moc_mainwindow.cpp
+	C:\Qt\5.11.1\mingw53_32\bin\moc.exe $(DEFINES) --include release/moc_predefs.h -IC:/Qt/5.11.1/mingw53_32/mkspecs/win32-g++ -IC:/Users/2125228/Documents/GitHub/Weerstation/Desktop-Applicatie -IC:/Qt/5.11.1/mingw53_32/include -IC:/Qt/5.11.1/mingw53_32/include/QtWidgets -IC:/Qt/5.11.1/mingw53_32/include/QtGui -IC:/Qt/5.11.1/mingw53_32/include/QtANGLE -IC:/Qt/5.11.1/mingw53_32/include/QtSql -IC:/Qt/5.11.1/mingw53_32/include/QtCore -I. -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward ..\Desktop-Applicatie\mainwindow.h -o release\moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -642,6 +642,8 @@ release/connection.o: ../Desktop-Applicatie/connection.cpp ../Desktop-Applicatie
 		C:/Qt/5.11.1/mingw53_32/include/QtCore/qstringbuilder.h \
 		C:/Qt/5.11.1/mingw53_32/include/QtSql/QSqlQuery \
 		C:/Qt/5.11.1/mingw53_32/include/QtSql/qsqlquery.h \
+		C:/Qt/5.11.1/mingw53_32/include/QtSql/QSqlError \
+		C:/Qt/5.11.1/mingw53_32/include/QtSql/qsqlerror.h \
 		C:/Qt/5.11.1/mingw53_32/include/QtCore/QtDebug \
 		C:/Qt/5.11.1/mingw53_32/include/QtCore/qdebug.h \
 		C:/Qt/5.11.1/mingw53_32/include/QtCore/qalgorithms.h \

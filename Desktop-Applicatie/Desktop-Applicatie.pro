@@ -4,9 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += \
-core gui widgets\
-sql
+QT += core gui widgets sql
 
 
 TARGET = Desktop-Applicatie
