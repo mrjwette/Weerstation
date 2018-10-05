@@ -27,16 +27,21 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     valuelabels.cpp \
-    connection.cpp
+    connection.cpp \
+    monthlyaverage.cpp
 
 HEADERS += \
         mainwindow.h \
     valuelabels.h \
     connection.h \
-    connection.h
+    connection.h \
+    monthlyaverage.h \
+    weeklyaverage.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    MonthlyAverage.ui \
+    WeeklyAverage.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

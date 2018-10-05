@@ -14,16 +14,16 @@
 #include <QtSql/QSqlError>
 
 #include <QtDebug>
-
+/*
 
 Connection::Connection()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLite");
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("localhost");
 
-    db.setUserName("root");
+    db.setUserName("newuser");
     db.setPassword("Admin_123");
-    db.setDatabaseName("fun4all");
+    db.setDatabaseName("test");
     db.setPort(3306);
 
     if (db.open())
@@ -43,12 +43,12 @@ Connection::Connection()
 void Connection::test()
 {
 
-    QSqlQuery query("SELECT name FROM country");
+    QSqlQuery query("SELECT * FROM meetwaarden");
 
 }
 
 
 
 
-
+*/
 

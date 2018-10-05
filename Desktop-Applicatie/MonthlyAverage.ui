@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1032</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>492</y>
+     <width>291</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>View Line Graph</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LabelHumid">
+   <property name="geometry">
+    <rect>
+     <x>345</x>
+     <y>242</y>
+     <width>328</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Humidity</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ValuePressure">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>270</y>
+     <width>329</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>25</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0 Pa</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ValueHumidity">
+   <property name="geometry">
+    <rect>
+     <x>345</x>
+     <y>270</y>
+     <width>328</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>25</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0%</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ValueTemperature">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>269</y>
+     <width>329</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>25</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>-273°C</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LabelPress">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>242</y>
+     <width>329</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Air Pressure</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LabelTemp_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>52</y>
+     <width>1011</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>28</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Monthly Average</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LabelTemp">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>242</y>
+     <width>329</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Temperature</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>368</x>
+     <y>492</y>
+     <width>291</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>View Weekly Average</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>708</x>
+     <y>492</y>
+     <width>291</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Go Home</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

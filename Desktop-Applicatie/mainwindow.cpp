@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "valuelabels.h"
+#include "monthlyaverage.h"
 
 #include <QString>
 
@@ -27,4 +28,19 @@ void MainWindow::updateValueLabels(double tempVal, double humidVal, double press
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->label->setText("Week Average");
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->label->setText("Month Average");
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    ui->label->setText("Last measurment data");
 }
