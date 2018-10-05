@@ -1,0 +1,11 @@
+/*
+ * esp.c
+ *
+ *  Created on: 4 Oct 2018
+ *      Author: djans
+ */
+
+void setBus( UART_HandleTypeDef *uartBus )
+{
+	bus = uartBus;
+}

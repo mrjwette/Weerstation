@@ -1,0 +1,19 @@
+/*
+ * weerstation.c
+ *
+ *  Created on: 3 Oct 2018
+ *      Author: djans
+ */
+
+#include "weerstation.h"
+#include "stm32f0xx_hal_gpio.h"
+
+void setup()
+{
+
+}
+
+void loop()
+{
+	HAL_GPIO_WritePin(GPIOB, 3, GPIO_PIN_SET);
+}

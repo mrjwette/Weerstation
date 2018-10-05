@@ -1,0 +1,24 @@
+/*
+ * weerstation.c
+ *
+ *  Created on: 3 Oct 2018
+ *      Author: djans
+ */
+
+#include "weerstation.h"
+#include "stm32f0xx_hal.h"
+#include "cmsis_os.h"
+
+char buf[8] buf = "AT+GMR\r\n";
+
+void setup()
+{
+
+}
+
+void loop()
+{
+	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
+	HAL_UART_Transmit( &huart1, buf, sizeof(buf), 500 );
+	osDelay(500);
+}

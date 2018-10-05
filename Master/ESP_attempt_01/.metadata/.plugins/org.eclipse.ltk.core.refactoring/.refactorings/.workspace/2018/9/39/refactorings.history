@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Weerstation_01/Src/weerstation.c&apos;" deleteContents="false" description="Delete resource &apos;Weerstation_01/Src/weerstation.c&apos;" element1="/Weerstation_01/Src/weerstation.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1538138855558"/>
+</session>
