@@ -95,7 +95,7 @@ public:
 
         gridLayoutWidget_3 = new QWidget(centralWidget);
         gridLayoutWidget_3->setObjectName(QStringLiteral("gridLayoutWidget_3"));
-        gridLayoutWidget_3->setGeometry(QRect(529, 380, 221, 80));
+        gridLayoutWidget_3->setGeometry(QRect(529, 350, 221, 80));
         gridLayout_3 = new QGridLayout(gridLayoutWidget_3);
         gridLayout_3->setSpacing(6);
         gridLayout_3->setContentsMargins(11, 11, 11, 11);
@@ -108,7 +108,7 @@ public:
 
         gridLayoutWidget_4 = new QWidget(centralWidget);
         gridLayoutWidget_4->setObjectName(QStringLiteral("gridLayoutWidget_4"));
-        gridLayoutWidget_4->setGeometry(QRect(10, 380, 221, 80));
+        gridLayoutWidget_4->setGeometry(QRect(10, 350, 221, 80));
         gridLayout_4 = new QGridLayout(gridLayoutWidget_4);
         gridLayout_4->setSpacing(6);
         gridLayout_4->setContentsMargins(11, 11, 11, 11);
@@ -121,7 +121,7 @@ public:
 
         gridLayoutWidget_5 = new QWidget(centralWidget);
         gridLayoutWidget_5->setObjectName(QStringLiteral("gridLayoutWidget_5"));
-        gridLayoutWidget_5->setGeometry(QRect(270, 380, 221, 80));
+        gridLayoutWidget_5->setGeometry(QRect(270, 350, 221, 80));
         gridLayout_5 = new QGridLayout(gridLayoutWidget_5);
         gridLayout_5->setSpacing(6);
         gridLayout_5->setContentsMargins(11, 11, 11, 11);
@@ -134,7 +134,7 @@ public:
 
         gridLayoutWidget_6 = new QWidget(centralWidget);
         gridLayoutWidget_6->setObjectName(QStringLiteral("gridLayoutWidget_6"));
-        gridLayoutWidget_6->setGeometry(QRect(10, 120, 221, 111));
+        gridLayoutWidget_6->setGeometry(QRect(10, 80, 221, 111));
         gridLayout_6 = new QGridLayout(gridLayoutWidget_6);
         gridLayout_6->setSpacing(6);
         gridLayout_6->setContentsMargins(11, 11, 11, 11);
@@ -151,7 +151,7 @@ public:
 
         gridLayoutWidget_8 = new QWidget(centralWidget);
         gridLayoutWidget_8->setObjectName(QStringLiteral("gridLayoutWidget_8"));
-        gridLayoutWidget_8->setGeometry(QRect(270, 240, 151, 111));
+        gridLayoutWidget_8->setGeometry(QRect(270, 200, 151, 111));
         gridLayout_8 = new QGridLayout(gridLayoutWidget_8);
         gridLayout_8->setSpacing(6);
         gridLayout_8->setContentsMargins(11, 11, 11, 11);
@@ -166,7 +166,7 @@ public:
 
         gridLayoutWidget_9 = new QWidget(centralWidget);
         gridLayoutWidget_9->setObjectName(QStringLiteral("gridLayoutWidget_9"));
-        gridLayoutWidget_9->setGeometry(QRect(270, 120, 221, 111));
+        gridLayoutWidget_9->setGeometry(QRect(270, 80, 221, 111));
         gridLayout_9 = new QGridLayout(gridLayoutWidget_9);
         gridLayout_9->setSpacing(6);
         gridLayout_9->setContentsMargins(11, 11, 11, 11);
@@ -181,7 +181,7 @@ public:
 
         gridLayoutWidget_11 = new QWidget(centralWidget);
         gridLayoutWidget_11->setObjectName(QStringLiteral("gridLayoutWidget_11"));
-        gridLayoutWidget_11->setGeometry(QRect(530, 120, 221, 111));
+        gridLayoutWidget_11->setGeometry(QRect(530, 80, 221, 111));
         gridLayout_11 = new QGridLayout(gridLayoutWidget_11);
         gridLayout_11->setSpacing(6);
         gridLayout_11->setContentsMargins(11, 11, 11, 11);
@@ -196,7 +196,7 @@ public:
 
         gridLayoutWidget_12 = new QWidget(centralWidget);
         gridLayoutWidget_12->setObjectName(QStringLiteral("gridLayoutWidget_12"));
-        gridLayoutWidget_12->setGeometry(QRect(430, 240, 61, 111));
+        gridLayoutWidget_12->setGeometry(QRect(430, 200, 61, 111));
         gridLayout_12 = new QGridLayout(gridLayoutWidget_12);
         gridLayout_12->setSpacing(6);
         gridLayout_12->setContentsMargins(11, 11, 11, 11);
@@ -210,7 +210,7 @@ public:
 
         gridLayoutWidget_13 = new QWidget(centralWidget);
         gridLayoutWidget_13->setObjectName(QStringLiteral("gridLayoutWidget_13"));
-        gridLayoutWidget_13->setGeometry(QRect(170, 240, 61, 111));
+        gridLayoutWidget_13->setGeometry(QRect(170, 200, 61, 111));
         gridLayout_14 = new QGridLayout(gridLayoutWidget_13);
         gridLayout_14->setSpacing(6);
         gridLayout_14->setContentsMargins(11, 11, 11, 11);
@@ -224,7 +224,7 @@ public:
 
         gridLayoutWidget_10 = new QWidget(centralWidget);
         gridLayoutWidget_10->setObjectName(QStringLiteral("gridLayoutWidget_10"));
-        gridLayoutWidget_10->setGeometry(QRect(10, 240, 151, 111));
+        gridLayoutWidget_10->setGeometry(QRect(10, 200, 151, 111));
         gridLayout_15 = new QGridLayout(gridLayoutWidget_10);
         gridLayout_15->setSpacing(6);
         gridLayout_15->setContentsMargins(11, 11, 11, 11);
@@ -239,7 +239,7 @@ public:
 
         gridLayoutWidget_14 = new QWidget(centralWidget);
         gridLayoutWidget_14->setObjectName(QStringLiteral("gridLayoutWidget_14"));
-        gridLayoutWidget_14->setGeometry(QRect(690, 240, 61, 111));
+        gridLayoutWidget_14->setGeometry(QRect(690, 200, 61, 111));
         gridLayout_16 = new QGridLayout(gridLayoutWidget_14);
         gridLayout_16->setSpacing(6);
         gridLayout_16->setContentsMargins(11, 11, 11, 11);
@@ -253,7 +253,7 @@ public:
 
         gridLayoutWidget_15 = new QWidget(centralWidget);
         gridLayoutWidget_15->setObjectName(QStringLiteral("gridLayoutWidget_15"));
-        gridLayoutWidget_15->setGeometry(QRect(530, 240, 151, 111));
+        gridLayoutWidget_15->setGeometry(QRect(530, 200, 151, 111));
         gridLayout_17 = new QGridLayout(gridLayoutWidget_15);
         gridLayout_17->setSpacing(6);
         gridLayout_17->setContentsMargins(11, 11, 11, 11);

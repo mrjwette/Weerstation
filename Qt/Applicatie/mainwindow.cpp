@@ -21,6 +21,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setFixedSize(760,450);
+
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("databases.aii.avans.nl"); // Hostname, databases.aii.avans.nl of Localhost
     db.setPort(3306); // Port, Deze staat goed
@@ -55,16 +57,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::getData()
-{
-    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
-    db.setHostName("databases.aii.avans.nl"); // Hostname, databases.aii.avans.nl of Localhost
-    db.setPort(3306); // Port, Deze staat goed
-    db.setUserName("mrjwette"); // gebruikersnaam, schoolnaam of naam niet je gebruikt bij het inloggen voor je localen database
-    db.setPassword("Ab12345"); // Wachtwoord, Ab12345 of het wachtwoord wat je gebruikt bij het inloggen voor je localen database
-    db.setDatabaseName("mrjwette_db"); // Database, naam database
-    db.open();
-}
 
 void MainWindow::on_Week_clicked()
 {
@@ -95,6 +87,7 @@ void MainWindow::on_Week_clicked()
     }
 
     ui->label->setText("Week Average");
+    db.close();
 
 }
 
@@ -127,6 +120,7 @@ void MainWindow::on_Month_clicked()
     }
 
     ui->label->setText("Month Average");
+    db.close();
 }
 
 
@@ -159,5 +153,6 @@ void MainWindow::on_LastMesurements_clicked()
     }
 
     ui->label->setText("Last Measurements");
+    db.close();
 }
 

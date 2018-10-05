@@ -14,7 +14,6 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void getData();
 
 private slots:
     void on_Week_clicked();

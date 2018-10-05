@@ -18,6 +18,10 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    Connection c;
+    c.getData();
+
+
     MainWindow w;
     w.show();
 

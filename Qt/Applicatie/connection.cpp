@@ -57,6 +57,7 @@ void Connection::getData()
 
             while(query.next())
             {
+                qDebug() << query.value(0).toString();
                 qDebug() << query.value(1).toString();
                 qDebug() << query.value(2).toString();
                 qDebug() << query.value(3).toString();
