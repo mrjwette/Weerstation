@@ -1,6 +1,6 @@
-15:54:20 **** Incremental Build of configuration Debug for project Weerstation_01 ****
+11:28:41 **** Incremental Build of configuration Debug for project Weerstation_01 ****
 make all 
 make: Nothing to be done for 'all'.
 
-15:54:21 Build Finished (took 421ms)
+11:28:41 Build Finished (took 541ms)
 
