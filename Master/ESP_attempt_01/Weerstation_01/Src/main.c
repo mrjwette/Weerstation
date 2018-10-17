@@ -351,10 +351,7 @@ void StartDefaultTask(void const * argument)
   /* USER CODE BEGIN 5 */
 
 	set_UART_Bus( &huart1 );
-
-	UART_Send_Command( "AT+CWMODE=1\r\n", 500 );
-	osDelay(100);
-	UART_Send_Command( "AT+CWJAP=\"AndroidHotspot1411\",\"Weetjeniet1\"\r\n", 2000 );
+	setup_Connection();
 
   /* Infinite loop */
   for(;;)
