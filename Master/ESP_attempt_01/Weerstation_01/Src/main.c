@@ -354,7 +354,6 @@ void StartDefaultTask(void const * argument)
 	set_UART_Bus( &huart1 );
 
 	setup_Connection();
-	osDelay(5000);
 	uploadValues( 17, 17, 17 );
 
   /* Infinite loop */
