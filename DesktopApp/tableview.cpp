@@ -37,29 +37,60 @@ void TableView::on_pushButton_4_clicked()
     Connection();
     QString datum = ui->textEdit->toPlainText();
 
-    if(ui->radioButton->isChecked())
+    if(ui->checkBox->isChecked())
     {
-        query->prepare("SELECT Datum, Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden WHERE MONTH(Datum) = MONTH(:datum) ORDER BY Datum DESC");
-        query->bindValue(":datum", datum);
-        setModel();
+        if(ui->radioButton->isChecked())
+        {
+            query->prepare("SELECT Datum, Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden WHERE MONTH(Datum) = MONTH(:datum) ORDER BY Datum ASC");
+            query->bindValue(":datum", datum);
+            setModel();
+        }
+        else if(ui->radioButton_2->isChecked())
+        {
+            query->prepare("SELECT Datum, Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden WHERE WEEK(Datum) = WEEK(:datum) ORDER BY Datum ASC");
+            query->bindValue(":datum", datum);
+            setModel();
+        }
+        else if(ui->radioButton_3->isChecked())
+        {
+            query->prepare("SELECT Datum, Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden WHERE LEFT(Datum, 10) = :datum ORDER BY Datum ASC");
+            query->bindValue(":datum", datum);
+            setModel();
+        }
+        else if(ui->radioButton_4->isChecked())
+        {
+            query->prepare("SELECT Datum, Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden ORDER BY Datum ASC");
+            setModel();
+        }
     }
-    else if(ui->radioButton_2->isChecked())
+    else
     {
-        query->prepare("SELECT Datum, Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden WHERE WEEK(Datum) = WEEK(:datum) ORDER BY Datum DESC");
-        query->bindValue(":datum", datum);
-        setModel();
+        if(ui->radioButton->isChecked())
+        {
+            query->prepare("SELECT Datum, Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden WHERE MONTH(Datum) = MONTH(:datum) ORDER BY Datum DESC");
+            query->bindValue(":datum", datum);
+            setModel();
+        }
+        else if(ui->radioButton_2->isChecked())
+        {
+            query->prepare("SELECT Datum, Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden WHERE WEEK(Datum) = WEEK(:datum) ORDER BY Datum DESC");
+            query->bindValue(":datum", datum);
+            setModel();
+        }
+        else if(ui->radioButton_3->isChecked())
+        {
+            query->prepare("SELECT Datum, Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden WHERE LEFT(Datum, 10) = :datum ORDER BY Datum DESC");
+            query->bindValue(":datum", datum);
+            setModel();
+        }
+        else if(ui->radioButton_4->isChecked())
+        {
+            query->prepare("SELECT Datum, Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden ORDER BY Datum DESC");
+            setModel();
+        }
     }
-    else if(ui->radioButton_3->isChecked())
-    {
-        query->prepare("SELECT Datum, Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden WHERE LEFT(Datum, 10) = :datum ORDER BY Datum DESC");
-        query->bindValue(":datum", datum);
-        setModel();
-    }
-    else if(ui->radioButton_4->isChecked())
-    {
-        query->prepare("SELECT Datum, Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden ORDER BY Datum DESC");
-        setModel();
-    }
+
+
 
     db.close();
 }
