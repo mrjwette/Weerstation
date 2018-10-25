@@ -54,6 +54,7 @@
 /* USER CODE BEGIN Includes */
 
 #include "esp.h"
+#include <string.h>
 
 /* USER CODE END Includes */
 
@@ -351,7 +352,10 @@ void StartDefaultTask(void const * argument)
   /* USER CODE BEGIN 5 */
 
 	set_UART_Bus( &huart1 );
+
 	setup_Connection();
+	osDelay(5000);
+	uploadValues( 17, 17, 17 );
 
   /* Infinite loop */
   for(;;)
