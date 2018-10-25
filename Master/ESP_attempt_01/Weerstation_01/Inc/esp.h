@@ -13,7 +13,8 @@
 UART_HandleTypeDef *bus;
 
 void setup_Connection();
-void UART_Send_Command( char *command, int timeout );
+void UART_Send_Command( char *command, int timeout, char *fdbk );
+int UART_Read_String( char *read, int timeout );
 void set_UART_Bus( UART_HandleTypeDef *uartBus );
 UART_HandleTypeDef *get_UART_Bus();
 void uploadValues( float x, float y, float z );
