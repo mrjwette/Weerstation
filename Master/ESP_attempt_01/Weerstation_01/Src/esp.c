@@ -12,15 +12,14 @@
 #include "cmsis_os.h"
 #include <stdlib.h>
 
-#define HOST "api.thingspeak.com"
-#define API "HGTIQJOVPEUS11HG"
+#define HOST "rememberseptember1944.nl"
 #define PORT "80"
 
-#define SSID "Ziggo52CD1C9"
-#define PASS "Jhw65vChfdys"
+//#define SSID "Ziggo52CD1C9"
+//#define PASS "Jhw65vChfdys"
 
-//#define SSID "AndroidHotspot1411"
-//#define PASS "Weetjeniet1"
+#define SSID "HOTSPOT VAN DIMITRI"
+#define PASS "Casisgay"
 
 void setup_Connection()
 {
@@ -39,7 +38,6 @@ void UART_Send_Command( char *command, int timeout, char *fdbk )
 
 int UART_Read_String( char *read, int timeout )
 {
-	//int size = strlen( read );
 	char buff[100];
 	memset( buff, '\0', sizeof(buff) );
 
@@ -66,26 +64,29 @@ UART_HandleTypeDef *get_UART_Bus()
 	return bus;
 }
 
+//, strTem, strPre, strHum
+
 void uploadValues( float Tem, float Pre, float Hum )
 {
-	char postData[100];
-	memset( postData, '\0', sizeof(postData) );
+	char postData[128];
+	//memset( postData, '\0', sizeof(postData) );
 	char strTem[8];
 	gcvt( Tem, 8, strTem );
 	char strPre[8];
 	gcvt( Pre, 8, strPre );
 	char strHum[8];
 	gcvt( Hum, 8, strHum );
-	sprintf( postData, "GET /update?api_key=HGTIQJOVPEUS11HG&Temp=%s&Vocht=%s&Druk=%s", strTem, strPre, strHum );
+	sprintf( postData, "GET /OperationWeerstation/weer.php HTTP/1.1 \r\n"
+			"Host: rememberseptember1944.nl\r\n\r\n" );
 
-	char *cmdStart = "AT+CIPSTART=\"TCP\",\"api.thingspeak.com\",80\r\n";
+	char *cmdStart = "AT+CIPSTART=\"TCP\",\"rememberseptember1944.nl\",80\r\n";
 	UART_Send_Command( cmdStart, 10000, "OK\r\n" );
 
 	char cmdSend[100];
 	memset( cmdSend, '\0', sizeof(cmdSend) );
-	sprintf( cmdSend, "AT+CIPSEND=0,%d\r\n", strlen(postData) + 4);
+	sprintf( cmdSend, "AT+CIPSEND=%d\r\n", strlen(postData) );
 	UART_Send_Command( cmdSend, 500, "OK");
 
-	UART_Send_Command( postData, 500, "OK" );
+	UART_Send_Command( postData, 500, "</body>" );
 	UART_Send_Command( "AT+CIPCLOSE=0\r\n", 1000, "OK" );
 }
