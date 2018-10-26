@@ -76,8 +76,7 @@ void uploadValues( float Tem, float Pre, float Hum )
 	gcvt( Pre, 8, strPre );
 	char strHum[8];
 	gcvt( Hum, 8, strHum );
-	sprintf( postData, "POST /OperationWeerstation/weer.php?Temp=%s&Vocht=%s&Druk=%s HTTP/1.1\r\n"
-			"Host: rememberseptember1944.nl\r\n\r\n", strTem, strPre, strHum );
+	sprintf( postData, "GET /OperationWeerstation/weer.php?Temp=22&Vocht=95&Druk=1020 HTTP/1.1 \r\n");
 
 	char *cmdStart = "AT+CIPSTART=\"TCP\",\"rememberseptember1944.nl\",80\r\n";
 	UART_Send_Command( cmdStart, 10000, "OK\r\n" );
