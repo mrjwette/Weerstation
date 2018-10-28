@@ -16,11 +16,11 @@
 #define HOST "rememberseptember1944.nl"
 #define PORT "80"
 
-//#define SSID "Ziggo52CD1C9"
-//#define PASS "Jhw65vChfdys"
+#define SSID "Ziggo52CD1C9"
+#define PASS "Jhw65vChfdys"
 
-#define SSID "HOTSPOT VAN DIMITRI"
-#define PASS "Casisgay"
+//#define SSID "HOTSPOT VAN DIMITRI"
+//#define PASS "Casisgay"
 
 void setup_Connection()
 {
@@ -34,7 +34,8 @@ void UART_Send_Command( char *command, int timeout, char *fdbk )
 {
 	HAL_UART_Transmit( bus, command, strlen(command), timeout );
 
-	UART_Read_String(fdbk, timeout);
+	if( strcmp(fdbk, "NULL") != 0 )
+		UART_Read_String(fdbk, timeout);
 }
 
 int UART_Read_String( char *read, int timeout )
@@ -67,18 +68,18 @@ UART_HandleTypeDef *get_UART_Bus()
 
 //, strTem, strPre, strHum
 // float Tem, float Pre, float Hum
-void uploadValues()
+void uploadValues( float temp, float pres, float humid )
 {
 	char postData[128];
-	//memset( postData, '\0', sizeof(postData) );
-	char strTem[8];
-	gcvt( measureTemperature(), 8, strTem);
-	char strPre[8];
-	gcvt( measurePressure(), 8, strPre);
-	char strHum[8];
-	gcvt( measureHumidity(), 8, strHum);
-	sprintf( postData, "POST /OperationWeerstation/weer.php?Temp=%s&Vocht=%s&Druk=%s HTTP/1.1\r\n"
-			"Host: rememberseptember1944.nl\r\n\r\n", strTem, strPre, strHum );
+
+	char strTem[4];
+	gcvt( temp, 4, strTem);
+	char strPre[4];
+	gcvt( pres, 4, strPre);
+	char strHum[4];
+	gcvt( humid, 4, strHum);
+	sprintf( postData, "POST /OperationWeerstation/weer.php?Temp=%s&Vocht=%s&Druk=%s HTTP/1.1 \r\n"
+			"Host: rememberseptember1944.nl\r\n\r\n", strTem, strHum, strPre );
 
 	char *cmdStart = "AT+CIPSTART=\"TCP\",\"rememberseptember1944.nl\",80\r\n";
 	UART_Send_Command( cmdStart, 10000, "OK\r\n" );
@@ -88,6 +89,6 @@ void uploadValues()
 	sprintf( cmdSend, "AT+CIPSEND=%d\r\n", strlen(postData) );
 	UART_Send_Command( cmdSend, 500, "OK");
 
-	UART_Send_Command( postData, 500, "</body>" );
+	UART_Send_Command( postData, 500, "NULL" );
 	UART_Send_Command( "AT+CIPCLOSE=0\r\n", 1000, "OK" );
 }

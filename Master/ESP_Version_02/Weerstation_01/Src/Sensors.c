@@ -8,7 +8,6 @@
 #include "Sensors.h"
 #include "stm32f0xx_hal.h"
 #include "stm32f0xx_hal_i2c.h"
-#include "bmp280.h"
 
 
 unsigned char sentData [5];
@@ -20,7 +19,6 @@ float hum = 0;
 unsigned char adress = 0;
 
 I2C_HandleTypeDef hi2c1;
-BMP280_HandleTypedef bmp280;
 
 /*	Sends the command to start measuring the humidity to the SI7021 sensor and reads the responding data.
  * 	After this it calculates the actual humidity with the received data and a formula and returns the value.

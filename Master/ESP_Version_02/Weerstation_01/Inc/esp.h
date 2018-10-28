@@ -17,6 +17,6 @@ void UART_Send_Command( char *command, int timeout, char *fdbk );
 int UART_Read_String( char *read, int timeout );
 void set_UART_Bus( UART_HandleTypeDef *uartBus );
 UART_HandleTypeDef *get_UART_Bus();
-void uploadValues();
+void uploadValues( float temp, float pres, float humid );
 
 #endif /* ESP_H_ */
