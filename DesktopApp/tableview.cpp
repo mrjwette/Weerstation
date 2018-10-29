@@ -6,6 +6,7 @@ TableView::TableView(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::TableView)
 {
+    setFixedSize(759,468);
     ui->setupUi(this);
     ui->textEdit->setText("yyyy-mm-dd");
 }
@@ -90,7 +91,6 @@ void TableView::on_pushButton_4_clicked()
         }
     }
 
-
-
     db.close();
 }
+

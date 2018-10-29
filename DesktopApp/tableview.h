@@ -27,7 +27,7 @@ private slots:
 private:
     Ui::TableView *ui;
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+    QSqlDatabase db = QSqlDatabase::database("qt_sql_default_connection");
     QSqlQuery *query = new QSqlQuery(db);
     QSqlQueryModel *model = new QSqlQueryModel();
     QDateEdit *dateEdit = new QDateEdit();

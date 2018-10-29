@@ -29,11 +29,12 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    setFixedSize(759,468);
     ui->setupUi(this);
     ui->textEdit->setText("yyyy-mm-dd");
 
     Connection();
-    query->prepare("SELECT LEFT(MAX(Datum), 10), RIGHT(MAX(Datum), 8), Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden");
+    query->prepare("SELECT LEFT(Datum, 10), RIGHT(Datum, 8), Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden ORDER BY Datum DESC LIMIT 1");
     ui->label->setText("Most Recent Measurements");
     SetLabels();
 
@@ -49,7 +50,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_3_clicked()
 {
     Connection();
-    query->prepare("SELECT LEFT(MAX(Datum), 10), RIGHT(MAX(Datum), 8), Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden");
+    query->prepare("SELECT LEFT(Datum, 10), RIGHT(Datum, 8), Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden ORDER BY Datum DESC LIMIT 1");
     SetLabels();
     db.close();
 }
@@ -80,7 +81,7 @@ void MainWindow::on_pushButton_4_clicked()
     }
     else
     {
-        query->prepare("SELECT LEFT(MAX(Datum), 10), RIGHT(MAX(Datum), 8), Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden");
+        query->prepare("SELECT LEFT(Datum, 10), RIGHT(Datum, 8), Temperatuur, Luchtvochtigheid, Luchtdruk FROM tblmeetwaarden ORDER BY Datum DESC LIMIT 1");
         SetLabels();
     }
 
@@ -93,5 +94,6 @@ void MainWindow::on_pushButton_2_clicked()
     tv.setModal(true);
     tv.exec();
 }
+
 
 
