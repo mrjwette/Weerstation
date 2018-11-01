@@ -1,0 +1,49 @@
+09:26:47 **** Incremental Build of configuration Debug for project Weerstation_01 ****
+make all 
+Building file: ../Src/esp.c
+Invoking: MCU GCC Compiler
+C:\Users\djans\Documents\GitHub\Weerstation\Master\ESP_Version_02\Weerstation_01\Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F030x8 -I"C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Inc" -I"C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Drivers/STM32F0xx_HAL_Driver/Inc" -I"C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Drivers/STM32F0xx_HAL_Driver/Inc/Legacy" -I"C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0" -I"C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Drivers/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Middlewares/Third_Party/FreeRTOS/Source/include" -I"C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS" -I"C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/esp.d" -MT"Src/esp.o" -o "Src/esp.o" "../Src/esp.c"
+../Src/esp.c: In function 'UART_Send_Command':
+../Src/esp.c:35:26: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  HAL_UART_Transmit( bus, command, strlen(command), timeout );
+                          ^~~~~~~
+In file included from C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Inc/stm32f0xx_hal_conf.h:290:0,
+                 from C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:46,
+                 from C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Inc/esp.h:11,
+                 from ../Src/esp.c:10:
+C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h:1298:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../Src/esp.c: In function 'UART_Read_String':
+../Src/esp.c:50:38: warning: pointer targets in passing argument 2 of 'HAL_UART_Receive' differ in signedness [-Wpointer-sign]
+   checkBuff = HAL_UART_Receive( bus, buff, 100, timeout );
+                                      ^~~~
+In file included from C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Inc/stm32f0xx_hal_conf.h:290:0,
+                 from C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:46,
+                 from C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Inc/esp.h:11,
+                 from ../Src/esp.c:10:
+C:/Users/djans/Documents/GitHub/Weerstation/Master/ESP_Version_02/Weerstation_01/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h:1299:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../Src/esp.c: In function 'uploadValues':
+../Src/esp.c:76:2: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  gcvt( temp, 4, strTem);
+  ^~~~
+Finished building: ../Src/esp.c
+ 
+Building target: Weerstation_01.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -specs=nosys.specs -specs=nano.specs -u _printf_float -T"../STM32F030R8Tx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Weerstation_01.elf" @"objects.list"   -lm
+Finished building target: Weerstation_01.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Weerstation_01.elf" "Weerstation_01.hex"
+arm-none-eabi-size "Weerstation_01.elf"
+   text	   data	    bss	    dec	    hex	filename
+  28132	    480	   5304	  33916	   847c	Weerstation_01.elf
+ 
+
+09:26:50 Build Finished (took 2s.735ms)
+

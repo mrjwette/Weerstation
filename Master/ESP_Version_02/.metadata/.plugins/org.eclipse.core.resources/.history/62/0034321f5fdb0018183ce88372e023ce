@@ -78,7 +78,7 @@ void uploadValues( float temp, float pres, float humid )
 	gcvt( pres, 4, strPre);
 	char strHum[4];
 	gcvt( humid, 4, strHum);
-	sprintf( postData, "POST /OperationWeerstation/weer.php?Temp=%s&Vocht=%s&Druk=%s HTTP/1.1  \r\n"
+	sprintf( postData, "POST /OperationWeerstation/weer.php?Temp=%s&Vocht=%s&Druk=%s HTTP/1.1 \r\n"
 			"Host: rememberseptember1944.nl\r\n\r\n", strTem, strHum, strPre );
 
 	char *cmdStart = "AT+CIPSTART=\"TCP\",\"rememberseptember1944.nl\",80\r\n";
